@@ -1,0 +1,26 @@
+#include <stdio.h>
+void main()
+{
+    float unit, stax, bill, newbill;
+    printf("Enter the unit of Electricity consumed: ");
+    scanf("%f", &unit);
+    if(unit <= 100)
+    {
+        bill = unit * 3.30+150;
+    }
+    else if((unit >= 101) && (unit<=200))
+    {
+       bill = unit * 4.20+230;
+    }
+    else if((unit >=201) && (unit<=400))
+    {
+        bill = unit*6.50+340;
+    }
+    else
+    {
+       bill = unit*7.80+430;
+    }
+    stax = (bill * 18) / 100;
+    newbill = bill + stax;
+    printf("The monthly usage bill is: %f", newbill);
+}
